@@ -1,0 +1,15 @@
+Size : 0
+
+insert elements in a linkedList.
+addAtFirst addAtEnd addAtIndex :
+
+Size : 3
+
+
+print Linked List :
+
+5 -> 4 -> 9 -> null
+
+print Linked List in reverse :
+
+null<- 9<- 4<- 5

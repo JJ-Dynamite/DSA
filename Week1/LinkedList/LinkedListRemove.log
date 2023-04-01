@@ -1,0 +1,11 @@
+add elements in a linkedList addAtFirst :
+
+4 -> 5 -> 5 -> 3 -> 1 -> null
+
+Size : 5
+
+ remove elements in a linkedList :
+ removeAtFirst ,removeAtLast and removeAtIndex :
+5 -> 3 -> null
+
+ Size : 3
