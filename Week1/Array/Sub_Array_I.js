@@ -12,9 +12,7 @@ const subArray = arr => {
 			}
             tc++
             sumArray.push(sum)
-            console.log()
 		}
-        console.log()
 	}
     console.log(`Total Sub Array : ${tc}`)
    let SumArray=sumArray.filter(e=>e)
