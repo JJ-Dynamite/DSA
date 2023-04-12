@@ -33,6 +33,7 @@ class SinglyLinkedList {
 		let duplicates = new Set()
 		while (current) {
 			if (seenValues.has(current.data)) {
+		
 				duplicates.add(current.data)
 				prev.next = current.next
 			} else {
@@ -66,6 +67,8 @@ class SinglyLinkedList {
 			current = current.next
 		}
 	}
+
+	
 }
 
 let myList = new SinglyLinkedList()
@@ -75,6 +78,7 @@ myList.insertAtEnd(2)
 myList.insertAtEnd(3)
 myList.insertAtEnd(4)
 myList.insertAtEnd(4)
+
 
 // console.log('Original list:')
 // myList.printList()

@@ -50,13 +50,42 @@ class LinkedList {
 		}
 		this.head = prev
 	}
+	revPrint(){
+		let arr=[]
+		let current=this.head
+		while(current){
+			arr.unshift(`${current.data} -> `)
+			current=current.next
+		}
+		console.log(...arr)
+	}
+	reverse(){
+		let prev=null
+		let current=this.head
+		let next
+
+		this.head=this.tail
+		this.tail=current
+
+		for(let i=0;i<this.size;i++){
+			next=current.next
+			current.next=prev
+			prev=current
+			current=next
+
+		}
+	}
 }
 
 let list = new LinkedList()
 list.addAtFirst(1)
 list.addAtFirst(2)
+list.addAtFirst(3)
 list.addAtFirst(4)
 list.addAtFirst(5)
 list.addAtFirst(6)
-list.reverseList()
+// list.reverseList()
+// list.revPrint()
+list.reverse()
 list.printList()
+console.log(list);
