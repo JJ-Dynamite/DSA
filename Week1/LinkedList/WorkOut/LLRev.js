@@ -5,6 +5,7 @@ class Node {
 	}
 }
 
+
 class LinkedList {
 	constructor() {
 		this.head = null
@@ -132,3 +133,14 @@ list1.print()
 // mergedList.head = mergedList.mergeSortedLists(list2.head, list1.head)
 // mergedList.print()
 // console.log()
+
+// reverse linked list using recursion 
+	
+
+
+
+
+
+
+
+	
