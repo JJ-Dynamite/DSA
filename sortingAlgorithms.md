@@ -105,6 +105,14 @@ function mergeSort(unsortedArray) {
   }
 
   const middle = Math.floor(unsortedArray.length / 2);
+  const left = unsortedArray.slice(0, middle);
+  const right = unsortedArray.slice(middle);
+
+  return merge(
+    mergeSort(left), mergeSort(right)
+  );
+}
+
 ```
 | Sorting Algorithm | Time Complexity - Best (Ω) | Time Complexity - Average (Θ) | Time Complexity - Worst (O) | Space Complexity - Worst (O) |
 | --- | --- | --- | --- | --- |
