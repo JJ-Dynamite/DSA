@@ -105,3 +105,15 @@ function mergeSort(unsortedArray) {
   }
 
   const middle = Math.floor(unsortedArray.length / 2);
+```
+| Sorting Algorithm | Time Complexity - Best (Ω) | Time Complexity - Average (Θ) | Time Complexity - Worst (O) | Space Complexity - Worst (O) |
+| --- | --- | --- | --- | --- |
+| Quick Sort | n log(n) | n log(n) | n^2 | n |
+| Bubble Sort | n | n^2 | n^2 | 1 |
+| Selection Sort | n^2 | n^2 | n^2 | 1 |
+| Insertion Sort | n | n^2 | n^2 | 1 |
+| Merge Sort | n log(n) | n log(n) | n log(n) | n |
+
+
+
+---
