@@ -114,6 +114,51 @@ function mergeSort(unsortedArray) {
 }
 
 ```
+- Heap Sort:
+```javascript
+function heapSort(arr) {
+  let n = arr.length;
+
+  // Build max heap
+  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+    heapify(arr, n, i);
+  }
+
+  // Heap sort
+  for (let i = n - 1; i >= 0; i--) {
+    let temp = arr[0];
+    arr[0] = arr[i];
+    arr[i] = temp;
+
+    // Heapify root element
+    heapify(arr, i, 0);
+  }
+}
+
+function heapify(arr, n, i) {
+  // Find largest among root, left child and right child
+  let largest = i;
+  let left = 2 * i + 1;
+  let right = 2 * i + 2;
+
+  if (left < n && arr[left] > arr[largest]) {
+    largest = left;
+  }
+
+  if (right < n && arr[right] > arr[largest]) {
+    largest = right;
+  }
+
+  // Swap and continue heapifying if root is not largest
+  if (largest != i) {
+    let swap = arr[i];
+    arr[i] = arr[largest];
+    arr[largest] = swap;
+    heapify(arr, n, largest);
+  }
+}
+```
+
 | Sorting Algorithm | Time Complexity - Best (Ω) | Time Complexity - Average (Θ) | Time Complexity - Worst (O) | Space Complexity - Worst (O) |
 | --- | --- | --- | --- | --- |
 | Quick Sort | n log(n) | n log(n) | n^2 | n |
@@ -121,6 +166,7 @@ function mergeSort(unsortedArray) {
 | Selection Sort | n^2 | n^2 | n^2 | 1 |
 | Insertion Sort | n | n^2 | n^2 | 1 |
 | Merge Sort | n log(n) | n log(n) | n log(n) | n |
+| Heap Sort | n log(n) | n log(n) | n log(n) | 1 |
 
 
 
